@@ -3,92 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RightToLive0 - Political Articles</title>
+  <title>Right to Live - Political Articles</title>
+  
+  <!-- Google Fonts: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: #f9f9f9;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9fafb;
       color: #222;
+      margin: 0;
+      padding: 0 20px;
+      line-height: 1.6;
     }
     header {
+      background-color: #2c3e50; /* dark blue */
+      padding: 20px 0;
       text-align: center;
-      margin-bottom: 40px;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     header h1 {
-      font-size: 2.8rem;
-      color: #2c3e50;
-      margin-bottom: 0;
+      margin: 0;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 2px;
     }
-    header p {
-      font-size: 1.2rem;
-      color: #555;
-      margin-top: 5px;
+    nav {
+      margin-top: 10px;
     }
-    main h2 {
-      border-bottom: 2px solid #2980b9;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-      color: #2980b9;
-    }
-    ul.articles {
-      list-style: none;
-      padding: 0;
-    }
-    ul.articles li {
-      margin-bottom: 15px;
-      background: #fff;
-      padding: 15px 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-    ul.articles li:hover {
-      box-shadow: 0 4px 15px rgb(0 0 0 / 0.2);
-    }
-    ul.articles a {
+    nav a {
+      color: #ecf0f1; /* lighter blue */
       text-decoration: none;
-      color: #2980b9;
-      font-weight: 600;
-      font-size: 1.1rem;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
-    ul.articles a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      color: #1abc9c; /* teal accent */
     }
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #777;
+    section {
+      max-width: 900px;
+      margin: 40px auto;
     }
-    @media (max-width: 500px) {
-      body {
-        margin: 20px 10px;
-        padding: 0 10px;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
+    h2 {
+      border-bottom: 2px solid #1abc9c;
+      padding-bottom: 5px;
+      color: #2c3e50;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>RightToLive0</h1>
-    <p>Political Articles on Housing, Capitalism, and NYC Issues</p>
+    <h1>Right to Live</h1>
+    <nav>
+      <a href="#latest">Latest</a>
+      <a href="#topics">Topics</a>
+      <a href="#about">About</a>
+    </nav>
   </header>
-  <main>
-    <h2>Articles</h2>
-    <ul class="articles">
-      <li><a href="articles/article1.html">The U.S. Housing Crisis Explained</a></li>
-      <li><a href="articles/article2.html">Capitalism and the Working Class</a></li>
-      <!-- Add more articles here -->
-    </ul>
-  </main>
-  <footer>
-    &copy; 2025 RightToLive0 — All rights reserved
-  </footer>
+
+  <section id="latest">
+    <h2>Latest Articles</h2>
+    <!-- Your articles go here -->
+  </section>
+
+  <section id="topics">
+    <h2>Topics</h2>
+    <!-- Topics or categories -->
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>This website focuses on political issues that matter, like healthcare, police reform, housing, and more.</p>
+  </section>
+
 </body>
 </html>
