@@ -2,161 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Right to Live - Political Articles</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f0f2f5;
-      color: #222;
-      line-height: 1.6;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #212529;
     }
     header {
-      background-color: #1e1e2f;
-      color: #fff;
+      background-color: #1f2a40;
       padding: 20px;
-      text-align: center;
+      color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
     header h1 {
+      margin: 0;
       font-size: 2.5rem;
     }
     nav {
       margin-top: 10px;
     }
     nav a {
-      color: #ccc;
+      color: #cfd8dc;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      margin-right: 20px;
+      font-weight: 500;
     }
     nav a:hover {
-      color: #1abc9c;
+      color: #fdd835;
     }
-    .hero {
+    .hero-banner {
       width: 100%;
       height: 50vh;
-      background-image: url('https://images.unsplash.com/photo-1615486369900-3cfa9b6d5c53');
-      background-size: cover;
-      background-position: center;
+      background: url('https://images.unsplash.com/photo-1508387027703-04f119f0b6d8') no-repeat center center/cover;
     }
     .quote-banner {
-      background-color: #1abc9c;
-      color: white;
+      background-color: #212529;
+      color: #fdd835;
       text-align: center;
       padding: 20px;
       font-style: italic;
+      font-size: 1.2rem;
     }
     .search-bar {
-      text-align: center;
-      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
     }
-    .search-bar input {
+    .search-bar input[type="text"] {
       padding: 10px;
-      width: 80%;
-      max-width: 400px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      width: 300px;
+      font-size: 1rem;
     }
-    .articles {
+    .issues-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+    .issue-card {
+      background: white;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .issue-card h3 {
+      margin-top: 0;
+    }
+    .article-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      padding: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .card h3 {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      color: #1e1e2f;
-    }
-    .card p {
-      font-size: 0.9rem;
-      color: #444;
-    }
-    .card a {
-      color: #1abc9c;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .topics {
-      text-align: center;
       padding: 40px 20px;
-      background: #e9f7f5;
     }
-    .topics h2 {
-      margin-bottom: 20px;
+    .article-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
-    .topics ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
+    .article-card:hover {
+      transform: translateY(-5px);
     }
-    .topics li {
-      background: #fff;
-      padding: 10px 20px;
-      border-radius: 30px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    .article-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .article-content {
+      padding: 15px;
+    }
+    .article-content h4 {
+      margin: 0;
     }
     .newsletter {
-      background: #f4f4f4;
-      text-align: center;
+      background-color: #f1f1f1;
       padding: 40px 20px;
-    }
-    .newsletter h2 {
-      margin-bottom: 10px;
+      text-align: center;
     }
     .newsletter input[type="email"] {
       padding: 10px;
       width: 250px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
       margin-right: 10px;
     }
     .newsletter button {
       padding: 10px 20px;
-      background: #1abc9c;
+      background-color: #1f2a40;
       color: white;
       border: none;
-      border-radius: 5px;
       cursor: pointer;
     }
     footer {
-      background-color: #1e1e2f;
+      background-color: #1f2a40;
       color: white;
       text-align: center;
-      padding: 20px 0;
-      margin-top: 50px;
-    }
-    @media (max-width: 600px) {
-      .newsletter input[type="email"] {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-      .newsletter button {
-        width: 100%;
-      }
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -164,64 +133,78 @@
   <header>
     <h1>Right to Live</h1>
     <nav>
+      <a href="#">Home</a>
       <a href="#articles">Articles</a>
       <a href="#topics">Topics</a>
       <a href="#about">About</a>
     </nav>
   </header>
 
-  <div class="hero"></div>
+  <div class="hero-banner"></div>
 
   <div class="quote-banner">
-    "Justice will not be served until those who are unaffected are as outraged as those who are."
+    “Justice will not be served until those who are unaffected are as outraged as those who are.”
   </div>
 
   <div class="search-bar">
     <input type="text" placeholder="Search articles...">
   </div>
 
-  <section id="articles" class="articles">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x200/?protest" alt="Protest">
+  <section class="issues-grid">
+    <div class="issue-card">
       <h3>Healthcare for All</h3>
-      <p>A deep dive into why universal healthcare should be a fundamental right in the U.S.</p>
-      <a href="#">Read more</a>
+      <p>Universal access to quality healthcare should be a basic human right.</p>
     </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x200/?climate" alt="Climate">
-      <h3>Climate Emergency</h3>
-      <p>How climate change is impacting vulnerable communities and what we can do now.</p>
-      <a href="#">Read more</a>
+    <div class="issue-card">
+      <h3>Climate Justice</h3>
+      <p>We demand environmental reforms and action against climate change.</p>
     </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x200/?housing" alt="Housing">
-      <h3>Housing is a Human Right</h3>
-      <p>Examining the root causes of homelessness in America.</p>
-      <a href="#">Read more</a>
+    <div class="issue-card">
+      <h3>Police Reform</h3>
+      <p>Reforming law enforcement to serve and protect all communities equally.</p>
+    </div>
+    <div class="issue-card">
+      <h3>Affordable Housing</h3>
+      <p>Housing is a right, not a privilege. No one should be left without shelter.</p>
     </div>
   </section>
 
-  <section id="topics" class="topics">
-    <h2>Key Topics</h2>
-    <ul>
-      <li>Healthcare</li>
-      <li>Climate Justice</li>
-      <li>Housing</li>
-      <li>Police Reform</li>
-      <li>LGBTQ+ Rights</li>
-      <li>Palestinian Solidarity</li>
-    </ul>
+  <section class="article-grid">
+    <div class="article-card">
+      <img src="https://images.unsplash.com/photo-1556740772-1a741367b93e" alt="Healthcare">
+      <div class="article-content">
+        <h4>Why America Needs Universal Healthcare</h4>
+        <p>An in-depth look at the broken healthcare system and paths to fix it.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="Climate">
+      <div class="article-content">
+        <h4>The Urgency of Climate Action</h4>
+        <p>What we must do to save our planet before it's too late.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Police">
+      <div class="article-content">
+        <h4>Reimagining Public Safety</h4>
+        <p>Exploring alternatives to traditional policing models.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
   </section>
 
-  <section id="about" class="newsletter">
-    <h2>Stay Informed</h2>
-    <p>Subscribe to our newsletter for weekly updates.</p>
-    <input type="email" placeholder="Your email">
+  <section class="newsletter">
+    <h2>Join Our Newsletter</h2>
+    <p>Stay up to date with new articles and activism opportunities.</p>
+    <input type="email" placeholder="Your email" />
     <button>Subscribe</button>
   </section>
 
   <footer>
-    <p>&copy; 2025 Right to Live. All rights reserved.</p>
+    <p>© 2025 Right to Live. All rights reserved.</p>
   </footer>
 </body>
 </html>
