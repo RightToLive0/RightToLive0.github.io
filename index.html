@@ -76,30 +76,6 @@
     .issue-card h3 {
       margin-top: 0;
     }
-    .featured-article {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .featured-article h2 {
-      color: #d32f2f;
-      margin-bottom: 15px;
-    }
-    .featured-article p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      color: #444;
-    }
-    .featured-article a {
-      font-weight: bold;
-      color: #1f2a40;
-      text-decoration: underline;
-      font-size: 1.1rem;
-    }
     .article-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -193,13 +169,7 @@
     </div>
   </section>
 
-  <section class="featured-article">
-    <h2>🇵🇸 Featured Article: Understanding the Israel/Palestine Conflict</h2>
-    <p>A brief overview of one of the most important political struggles today. Click below to read the full article.</p>
-    <a href="palestine-article.html">Read Full Article</a>
-  </section>
-
-  <section class="article-grid" id="articles">
+  <section class="article-grid">
     <div class="article-card">
       <img src="https://images.unsplash.com/photo-1556740772-1a741367b93e" alt="Healthcare">
       <div class="article-content">
@@ -236,121 +206,5 @@
   <footer>
     <p>© 2025 Right to Live. All rights reserved.</p>
   </footer>
-</body>
-</html>
-2. Your palestine-article.html (full article page) — standalone page with full article content:
-html
-Copy
-Edit
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Israel/Palestine Conflict - Right to Live</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 20px;
-      color: #212529;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    header {
-      background-color: #1f2a40;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 30px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    a.back-link {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: #1f2a40;
-      text-decoration: underline;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    h2 {
-      color: #d32f2f;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    h3 {
-      color: #b71c1c;
-      margin-top: 40px;
-    }
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin: 20px 0;
-    }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #333;
-    }
-    footer {
-      text-align: center;
-      margin: 60px 0 30px;
-      color: #666;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Right to Live</h1>
-  </header>
-
-  <a href="index.html" class="back-link">&larr; Back to Home</a>
-
-  <h2>🇵🇸 Understanding the Israel/Palestine Conflict</h2>
-
-  <article>
-    <h3>The Roots of the Conflict</h3>
-    <p>
-      The Israel-Palestine conflict is one of the most deeply entrenched political struggles in modern history, with origins tracing back to colonialism, religious claims, and international intervention...
-    </p>
-
-    <h4>British Mandate & Early Tensions</h4>
-    <p>
-      After World War I, Britain took control of Palestine under the League of Nations mandate. Tensions grew as Zionist immigration increased, clashing with the Arab population's aspirations for self-determination...
-    </p>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Mandate_for_Palestine_1920.jpg" alt="British Mandate map" />
-
-    <h4>The Nakba and Creation of Israel</h4>
-    <p>
-      In 1948, Israel was declared a state. Over 700,000 Palestinians were displaced — an event known as the Nakba, or "catastrophe." Villages were destroyed, families uprooted, and the refugee crisis was born...
-    </p>
-
-    <h4>Occupation & Resistance</h4>
-    <p>
-      The 1967 Six-Day War led to Israel occupying the West Bank, Gaza, and East Jerusalem. These territories remain under military occupation, fueling ongoing cycles of resistance and retaliation...
-    </p>
-
-    <h4>Modern-Day Crisis</h4>
-    <p>
-      Today, Gaza faces severe blockades, restricted aid, and repeated bombardments. The West Bank contends with expanding settlements. The world remains divided, but growing solidarity movements demand justice and equal rights for Palestinians.
-    </p>
-  </article>
-
-  <footer>
-    &copy; 2025 Right to Live. All rights reserved.
-  </footer>
-
 </body>
 </html>
