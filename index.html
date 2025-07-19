@@ -11,18 +11,18 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f9fafb;
+      background-color: #fff8f0; /* soft warm cream */
       color: #222;
       margin: 0;
       padding: 0 20px;
       line-height: 1.6;
     }
     header {
-      background-color: #2c3e50; /* dark blue */
+      background-color: #16a085; /* bright teal */
       padding: 20px 0;
       text-align: center;
       color: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     header h1 {
       margin: 0;
@@ -41,30 +41,37 @@
       transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #1abc9c; /* teal accent */
+      color: #e91e63; /* bright pink */
     }
     section {
       max-width: 900px;
       margin: 40px auto;
     }
     h2 {
-      border-bottom: 2px solid #1abc9c;
+      border-bottom: 3px solid #16a085;
       padding-bottom: 5px;
-      color: #2c3e50;
+      color: #117a65;
     }
-    .flag {
-      text-align: center;
-      margin-top: 20px;
+    .flags {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 30px 0;
+      align-items: center;
     }
-    .flag img {
-      width: 100px;
+    .flags img {
+      width: 120px;
+      border: 2px solid #16a085;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(22, 160, 133, 0.5);
     }
   </style>
 </head>
 <body>
 
-  <div class="flag">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestinian Flag">
+  <div class="flags">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestinian Flag" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Transgender_Pride.svg" alt="Transgender Pride Flag" />
   </div>
 
   <header>
