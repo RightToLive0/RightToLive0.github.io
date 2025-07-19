@@ -1,91 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Right to Live - Political Journalism</title>
+  <title>Right to Live - Political Articles</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      line-height: 1.6;
+      background: #f0f2f5;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
-
     header {
-      background-color: #0d1117;
+      background: #111;
       color: #fff;
-      padding: 20px 40px;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-
     header h1 {
+      margin: 0;
       font-size: 1.8rem;
     }
-
     nav a {
-      color: #ccc;
       margin-left: 20px;
+      color: #fff;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s;
     }
-
     nav a:hover {
       color: #1abc9c;
     }
-
     .hero {
+      background: url('https://images.unsplash.com/photo-1605187165983-2f55f0f3245c') center/cover no-repeat;
+      height: 70vh;
       width: 100%;
-      height: 45vh;
-      background-image: url('https://images.unsplash.com/photo-1609840114019-22bb1cbcfbde?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
-      background-size: cover;
-      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
     .content {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 1000px;
+      margin: 2rem auto;
       padding: 0 20px;
     }
-
-    h2 {
-      color: #0d1117;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #1abc9c;
-      padding-bottom: 5px;
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-
-    p {
-      margin-bottom: 20px;
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
     }
-
+    .card h3 {
+      margin-top: 0;
+    }
+    .quote-banner {
+      background: #2c3e50;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
     footer {
-      background-color: #0d1117;
+      background: #111;
       color: #ccc;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+    .search-bar {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .search-bar input {
+      padding: 10px;
+      width: 300px;
+      max-width: 80%;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .socials {
+      margin-top: 10px;
+    }
+    .socials a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Right to Live</h1>
     <nav>
-      <a href="#latest">Latest</a>
+      <a href="#articles">Articles</a>
       <a href="#topics">Topics</a>
       <a href="#about">About</a>
     </nav>
@@ -94,25 +115,39 @@
   <div class="hero"></div>
 
   <div class="content">
-    <section id="latest">
-      <h2>Latest Articles</h2>
-      <p>Stay tuned for in-depth analysis, critical perspectives, and grassroots coverage of pressing social and political issues.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="Search articles...">
+    </div>
+
+    <section id="quote" class="quote-banner">
+      "If there is no struggle, there is no progress." – Frederick Douglass
     </section>
 
     <section id="topics">
-      <h2>Topics</h2>
-      <p>Covering climate change, healthcare, housing, racial justice, economic inequality, LGBTQ+ rights, and more.</p>
+      <h2>Key Issues</h2>
+      <div class="card-grid">
+        <div class="card"><h3>Healthcare for All</h3><p>Access to affordable, quality healthcare for every citizen.</p></div>
+        <div class="card"><h3>Climate Justice</h3><p>Protecting the planet while ensuring equity in solutions.</p></div>
+        <div class="card"><h3>Education</h3><p>Improved funding and support for public schools and colleges.</p></div>
+        <div class="card"><h3>Police Reform</h3><p>Changing the system to prioritize safety, justice, and fairness.</p></div>
+        <div class="card"><h3>Housing</h3><p>Affordable homes and safe shelter as a basic right.</p></div>
+        <div class="card"><h3>Workers' Rights</h3><p>Fair wages, safe conditions, and union protection.</p></div>
+      </div>
     </section>
 
     <section id="about">
-      <h2>About</h2>
-      <p><strong>Right to Live</strong> is an independent political site focused on truth, transparency, and justice. We aim to amplify voices fighting for a better world.</p>
+      <h2>About This Site</h2>
+      <p>Right to Live is a political blog that advocates for justice, equity, and a better future for all. From housing to education, we spotlight issues and elevate voices demanding change.</p>
     </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 Right to Live. All rights reserved.</p>
+    &copy; 2025 Right to Live. Built with purpose.
+    <div class="socials">
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">Contact</a>
+    </div>
   </footer>
 </body>
-
 </html>
