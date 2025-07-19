@@ -6,99 +6,157 @@
   <title>Right to Live - Political Articles</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #f0f2f5;
-      color: #222;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f2f5;
+      color: #222;
+      line-height: 1.6;
+    }
     header {
-      background: #111;
+      background-color: #1e1e2f;
       color: #fff;
-      padding: 1rem 2rem;
+      padding: 20px;
+      text-align: center;
       position: sticky;
       top: 0;
-      z-index: 999;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
     }
     header h1 {
-      margin: 0;
-      font-size: 1.8rem;
+      font-size: 2.5rem;
+    }
+    nav {
+      margin-top: 10px;
     }
     nav a {
-      margin-left: 20px;
-      color: #fff;
+      color: #ccc;
       text-decoration: none;
-      font-weight: 500;
+      margin: 0 15px;
+      font-weight: bold;
     }
     nav a:hover {
       color: #1abc9c;
     }
     .hero {
-      background: url('https://images.unsplash.com/photo-1605187165983-2f55f0f3245c') center/cover no-repeat;
-      height: 70vh;
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .content {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 20px;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      padding: 1rem;
-    }
-    .card h3 {
-      margin-top: 0;
+      height: 50vh;
+      background-image: url('https://images.unsplash.com/photo-1615486369900-3cfa9b6d5c53');
+      background-size: cover;
+      background-position: center;
     }
     .quote-banner {
-      background: #2c3e50;
-      color: #fff;
-      padding: 2rem;
+      background-color: #1abc9c;
+      color: white;
       text-align: center;
+      padding: 20px;
       font-style: italic;
-      font-size: 1.2rem;
-    }
-    footer {
-      background: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: 3rem;
     }
     .search-bar {
       text-align: center;
-      margin: 2rem 0;
+      margin: 30px 0;
     }
     .search-bar input {
       padding: 10px;
-      width: 300px;
-      max-width: 80%;
-      border-radius: 4px;
+      width: 80%;
+      max-width: 400px;
       border: 1px solid #ccc;
+      border-radius: 5px;
     }
-    .socials {
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
       margin-top: 10px;
+      font-size: 1.2rem;
+      color: #1e1e2f;
     }
-    .socials a {
-      color: #ccc;
-      margin: 0 10px;
+    .card p {
+      font-size: 0.9rem;
+      color: #444;
+    }
+    .card a {
+      color: #1abc9c;
       text-decoration: none;
+      font-weight: bold;
+    }
+    .topics {
+      text-align: center;
+      padding: 40px 20px;
+      background: #e9f7f5;
+    }
+    .topics h2 {
+      margin-bottom: 20px;
+    }
+    .topics ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .topics li {
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .newsletter {
+      background: #f4f4f4;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .newsletter h2 {
+      margin-bottom: 10px;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      background: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #1e1e2f;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+    @media (max-width: 600px) {
+      .newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .newsletter button {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -114,40 +172,56 @@
 
   <div class="hero"></div>
 
-  <div class="content">
-    <div class="search-bar">
-      <input type="text" placeholder="Search articles...">
-    </div>
-
-    <section id="quote" class="quote-banner">
-      "If there is no struggle, there is no progress." – Frederick Douglass
-    </section>
-
-    <section id="topics">
-      <h2>Key Issues</h2>
-      <div class="card-grid">
-        <div class="card"><h3>Healthcare for All</h3><p>Access to affordable, quality healthcare for every citizen.</p></div>
-        <div class="card"><h3>Climate Justice</h3><p>Protecting the planet while ensuring equity in solutions.</p></div>
-        <div class="card"><h3>Education</h3><p>Improved funding and support for public schools and colleges.</p></div>
-        <div class="card"><h3>Police Reform</h3><p>Changing the system to prioritize safety, justice, and fairness.</p></div>
-        <div class="card"><h3>Housing</h3><p>Affordable homes and safe shelter as a basic right.</p></div>
-        <div class="card"><h3>Workers' Rights</h3><p>Fair wages, safe conditions, and union protection.</p></div>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About This Site</h2>
-      <p>Right to Live is a political blog that advocates for justice, equity, and a better future for all. From housing to education, we spotlight issues and elevate voices demanding change.</p>
-    </section>
+  <div class="quote-banner">
+    "Justice will not be served until those who are unaffected are as outraged as those who are."
   </div>
 
-  <footer>
-    &copy; 2025 Right to Live. Built with purpose.
-    <div class="socials">
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
-      <a href="#">Contact</a>
+  <div class="search-bar">
+    <input type="text" placeholder="Search articles...">
+  </div>
+
+  <section id="articles" class="articles">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x200/?protest" alt="Protest">
+      <h3>Healthcare for All</h3>
+      <p>A deep dive into why universal healthcare should be a fundamental right in the U.S.</p>
+      <a href="#">Read more</a>
     </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x200/?climate" alt="Climate">
+      <h3>Climate Emergency</h3>
+      <p>How climate change is impacting vulnerable communities and what we can do now.</p>
+      <a href="#">Read more</a>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x200/?housing" alt="Housing">
+      <h3>Housing is a Human Right</h3>
+      <p>Examining the root causes of homelessness in America.</p>
+      <a href="#">Read more</a>
+    </div>
+  </section>
+
+  <section id="topics" class="topics">
+    <h2>Key Topics</h2>
+    <ul>
+      <li>Healthcare</li>
+      <li>Climate Justice</li>
+      <li>Housing</li>
+      <li>Police Reform</li>
+      <li>LGBTQ+ Rights</li>
+      <li>Palestinian Solidarity</li>
+    </ul>
+  </section>
+
+  <section id="about" class="newsletter">
+    <h2>Stay Informed</h2>
+    <p>Subscribe to our newsletter for weekly updates.</p>
+    <input type="email" placeholder="Your email">
+    <button>Subscribe</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Right to Live. All rights reserved.</p>
   </footer>
 </body>
 </html>
