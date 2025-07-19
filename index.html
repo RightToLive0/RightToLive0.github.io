@@ -4,105 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Right to Live - Political Articles</title>
-  
-  <!-- Google Fonts: Roboto -->
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  
+
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #fff8f0; /* soft warm cream */
+      background-color: #f4f4f4;
       color: #222;
       margin: 0;
-      padding: 0 20px;
-      line-height: 1.6;
+      padding: 0;
     }
+
+    .hero-banner {
+      width: 100vw;
+      height: 40vh; /* skinnier height */
+      min-height: 200px;
+      max-height: 400px;
+      background-image: url('https://images.unsplash.com/photo-1609840114019-22bb1cbcfbde?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); /* Replace with your own */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
     header {
-      background-color: #16a085; /* bright teal */
+      background-color: #2c3e50;
+      color: white;
       padding: 20px 0;
       text-align: center;
-      color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+
     header h1 {
       margin: 0;
-      font-weight: 700;
-      font-size: 2rem;
-      letter-spacing: 2px;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
     }
+
     nav {
       margin-top: 10px;
     }
+
     nav a {
-      color: #ecf0f1; /* lighter blue */
+      color: #ecf0f1;
       text-decoration: none;
       margin: 0 15px;
       font-weight: 500;
       transition: color 0.3s ease;
     }
+
     nav a:hover {
-      color: #e91e63; /* bright pink */
+      color: #1abc9c;
     }
+
     section {
       max-width: 900px;
       margin: 40px auto;
+      padding: 0 20px;
     }
+
     h2 {
-      border-bottom: 3px solid #16a085;
+      border-bottom: 2px solid #1abc9c;
       padding-bottom: 5px;
-      color: #117a65;
-    }
-    /* Climate banner */
-    .climate-banner {
-      position: relative;
-      width: 100%;
-      height: 50vh; /* half viewport height */
-      min-height: 250px;
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    .climate-banner .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-      border-radius: 12px;
-    }
-
-    .climate-banner h1 {
-      font-size: 3.5rem;
-      font-weight: 900;
-      letter-spacing: 5px;
-      margin: 0;
-      text-transform: uppercase;
-    }
-
-    .climate-banner p {
-      font-size: 1.3rem;
-      margin-top: 10px;
-      font-weight: 500;
+      color: #2c3e50;
     }
   </style>
 </head>
 <body>
 
-  <section class="climate-banner">
-    <div class="overlay">
-      <h1>Right to Live</h1>
-      <p>Standing for justice, environment, and equality</p>
-    </div>
-  </section>
+  <!-- Visual-only political banner -->
+  <div class="hero-banner"></div>
 
   <header>
     <h1>Right to Live</h1>
@@ -115,7 +87,7 @@
 
   <section id="latest">
     <h2>Latest Articles</h2>
-    <!-- Your articles go here -->
+    <!-- Article content goes here -->
   </section>
 
   <section id="topics">
@@ -125,8 +97,15 @@
 
   <section id="about">
     <h2>About</h2>
-    <p>This website focuses on political issues that matter, like healthcare, police reform, housing, and more.</p>
+    <p>This website is dedicated to exposing injustices and advocating for the right to live — through climate justice, housing equity, healthcare, and human dignity.</p>
   </section>
 
 </body>
 </html>
+🔁 To Replace the Banner Image:
+Swap out the URL inside this part:
+
+css
+Copy
+Edit
+background-image: url('YOUR-IMAGE-URL-HERE');
