@@ -1,105 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Right to Live</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Work Sans', sans-serif;
-      background-color: #b3e5fc; /* Baby blue */
-      color: #000;
-    }
-    header {
-      padding: 2rem;
-      text-align: center;
-      background-color: #b3e5fc;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin: 0;
-    }
-    .quote {
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-align: center;
-      margin-top: 0.5rem;
-      color: #fff;
-    }
-    .articles-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .card {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 1rem;
-    }
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .card-desc {
-      font-size: 1rem;
-      color: #333;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #0288d1;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .card a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Right to Live</h1>
-    <div class="quote">Justice will not be served until those who are unaffected are as outraged as those who are.</div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrew's Political Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Libre Baskerville", serif;
+        background-color: #e0f4ff;
+        color: #1a1a1a;
+      }
 
-  <section class="articles-section">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581092334653-a6c4e56f0407" alt="Healthcare">
-      <div class="card-content">
-        <div class="card-title">Why America Needs Universal Healthcare</div>
-        <div class="card-desc">Examining the flaws in the current healthcare system and how universal healthcare could provide equity for all.</div>
-        <a href="#">Read More</a>
-      </div>
+      header {
+        background-color: #ffffff;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        color: #1a1a1a;
+      }
+
+      nav a {
+        margin-left: 1.5rem;
+        text-decoration: none;
+        color: #1a1a1a;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #0066cc;
+      }
+
+      .hero {
+        height: 50vh;
+        background-image: url("https://images.unsplash.com/photo-1575311374037-0a85f5c92eab");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero h2 {
+        color: white;
+        font-size: 3rem;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+      }
+
+      .intro {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .quote {
+        font-style: italic;
+        font-size: 1.4rem;
+        margin: 2rem auto;
+        text-align: center;
+        color: #ffffff;
+        background-color: #1a1a1a;
+        padding: 1rem;
+        border-radius: 10px;
+        width: fit-content;
+      }
+
+      .articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .card {
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .card h3 {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+        color: #0066cc;
+      }
+
+      .card p {
+        color: #333;
+      }
+
+      footer {
+        background-color: #ffffff;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: #777;
+        margin-top: 2rem;
+      }
+
+      /* Button styling */
+      .btn-explore {
+        text-align: center;
+        margin-top: 1.5rem;
+      }
+
+      .btn-explore a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: white;
+        color: #0066cc;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        border: 2px solid #0066cc;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .btn-explore a:hover {
+        background-color: #0066cc;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Andrew’s Political Hub</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <!-- Banner image only -->
+    </section>
+
+    <section class="intro">
+      <h1>Welcome to my website</h1>
+      <p>This site reflects my political views and causes I care about.</p>
+    </section>
+
+    <!-- Article explore button here -->
+    <div class="btn-explore">
+      <a href="articles.html">→ Explore Articles</a>
     </div>
 
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Israeli%E2%80%93Palestinian_conflict_collage.png/800px-Israeli%E2%80%93Palestinian_conflict_collage.png" alt="Palestine">
-      <div class="card-content">
-        <div class="card-title">The History of the Israel-Palestine Conflict</div>
-        <div class="card-desc">A deep dive into one of the world’s most complex and longstanding geopolitical struggles.</div>
-        <a href="articles/palestine.html">Read More</a>
-      </div>
+    <div class="quote">
+      “Justice will not be served until those who are unaffected are as outraged as those who are.”
     </div>
-  </section>
-</body>
+
+    <section class="articles">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df" alt="Healthcare" />
+        <h3>Why America Needs Universal Healthcare</h3>
+        <p>Explore the case for a system that prioritizes health over profit.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1609025035818-2c684c6b0a83" alt="Palestine" />
+        <h3>Understanding the Israel-Palestine Conflict</h3>
+        <p>A dive into the historical and current political crisis unfolding in the region.</p>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Andrew Shiwbaran. All rights reserved.
+    </footer>
+  </body>
 </html>
