@@ -2,219 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Right to Live - Political Articles</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Right to Live - Justice for All</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --hero-bg: #222;
+      --accent-yellow: #fdd835;
+      --accent-red: #d32f2f;
+      --card-shadow: rgba(0, 0, 0, 0.1);
+    }
+
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f8f9fa;
       margin: 0;
-      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f8f9fa;
       color: #212529;
     }
+
     header {
-      background-color: #1f2a40;
-      padding: 20px;
+      background: var(--hero-bg);
+      padding: 1rem 2rem;
       color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: #cfd8dc;
-      text-decoration: none;
-      margin-right: 20px;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #fdd835;
-    }
-    .hero-banner {
-      width: 100%;
-      height: 50vh;
-      background: url('https://images.unsplash.com/photo-1508387027703-04f119f0b6d8') no-repeat center center/cover;
-    }
-    .quote-banner {
-      background-color: #212529;
-      color: #fdd835;
       text-align: center;
-      padding: 20px;
-      font-style: italic;
-      font-size: 1.2rem;
     }
-    .search-bar {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
+
+    .hero {
+      background: var(--hero-bg) url('https://images.unsplash.com/photo-1607845212407-3592f1382218') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 8rem 2rem;
     }
-    .search-bar input[type="text"] {
-      padding: 10px;
-      width: 300px;
-      font-size: 1rem;
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
     }
-    .issues-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 0 20px;
+
+    .hero-tagline {
+      font-size: 1.5rem;
+      margin-top: 1rem;
     }
-    .issue-card {
-      background: white;
-      border: 1px solid #dee2e6;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .issue-card h3 {
-      margin-top: 0;
-    }
+
     .article-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      padding: 2rem;
     }
+
     .article-card {
       background: white;
-      border-radius: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px var(--card-shadow);
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+      transition: transform 0.2s;
     }
+
     .article-card:hover {
       transform: translateY(-5px);
     }
+
     .article-card img {
       width: 100%;
-      height: 160px;
+      height: 200px;
       object-fit: cover;
     }
+
     .article-content {
-      padding: 15px;
+      padding: 1rem;
     }
+
     .article-content h4 {
       margin: 0;
+      font-size: 1.25rem;
+      color: var(--hero-bg);
     }
-    .newsletter {
-      background-color: #f1f1f1;
-      padding: 40px 20px;
-      text-align: center;
+
+    .article-content p {
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
     }
-    .newsletter input[type="email"] {
-      padding: 10px;
-      width: 250px;
-      margin-right: 10px;
+
+    .btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--accent-yellow);
+      color: var(--hero-bg);
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
     }
-    .newsletter button {
-      padding: 10px 20px;
-      background-color: #1f2a40;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+
     footer {
-      background-color: #1f2a40;
-      color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Right to Live</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#articles">Articles</a>
-      <a href="#topics">Topics</a>
-      <a href="#about">About</a>
-    </nav>
+    <h2>Right to Live</h2>
   </header>
 
-  <div class="hero-banner"></div>
-
-  <div class="quote-banner">
-    “Justice will not be served until those who are unaffected are as outraged as those who are.”
-  </div>
-
-  <div class="search-bar">
-    <input type="text" placeholder="Search articles...">
-  </div>
-
-  <section class="issues-grid">
-    <div class="issue-card">
-      <h3>Healthcare for All</h3>
-      <p>Universal access to quality healthcare should be a basic human right.</p>
-    </div>
-    <div class="issue-card">
-      <h3>Climate Justice</h3>
-      <p>We demand environmental reforms and action against climate change.</p>
-    </div>
-    <div class="issue-card">
-      <h3>Police Reform</h3>
-      <p>Reforming law enforcement to serve and protect all communities equally.</p>
-    </div>
-    <div class="issue-card">
-      <h3>Affordable Housing</h3>
-      <p>Housing is a right, not a privilege. No one should be left without shelter.</p>
-    </div>
+  <section class="hero">
+    <h1>Right to Live</h1>
+    <p class="hero-tagline">A movement for justice, dignity & truth.</p>
   </section>
 
-  <section class="article-grid" id="articles">
+  <section class="article-grid">
     <div class="article-card">
-      <img src="https://images.unsplash.com/photo-1556740772-1a741367b93e" alt="Healthcare">
-      <div class="article-content">
-        <h4>Why America Needs Universal Healthcare</h4>
-        <p>An in-depth look at the broken healthcare system and paths to fix it.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-    <div class="article-card">
-      <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="Climate">
-      <div class="article-content">
-        <h4>The Urgency of Climate Action</h4>
-        <p>What we must do to save our planet before it's too late.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-    <div class="article-card">
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Police">
-      <div class="article-content">
-        <h4>Reimagining Public Safety</h4>
-        <p>Exploring alternatives to traditional policing models.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-
-    <!-- Israel/Palestine Article Card with link -->
-    <div class="article-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Gaza_strip_destroyed_buildings_2021.jpg" alt="Israel/Palestine Conflict">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Gaza_strip_destroyed_buildings_2021.jpg/800px-Gaza_strip_destroyed_buildings_2021.jpg" alt="Israel/Palestine Conflict">
       <div class="article-content">
         <h4>Understanding the Israel/Palestine Conflict</h4>
-        <p>A brief summary of the conflict and its history.</p>
-        <a href="articles/israel-palestine.html">Read More</a>
+        <p>An essential overview of historical and current struggles.</p>
+        <a href="articles/israel-palestine.html" class="btn">Read Full Article →</a>
       </div>
     </div>
-  </section>
 
-  <section class="newsletter">
-    <h2>Join Our Newsletter</h2>
-    <p>Stay up to date with new articles and activism opportunities.</p>
-    <input type="email" placeholder="Your email" />
-    <button>Subscribe</button>
+    <div class="article-card">
+      <img src="https://images.unsplash.com/photo-1588776814546-cad3f2ba3d58" alt="Healthcare">
+      <div class="article-content">
+        <h4>Why America Needs Universal Healthcare</h4>
+        <p>Exploring the moral and economic necessity of a healthcare system that works for everyone.</p>
+        <a href="#" class="btn">Read Full Article →</a>
+      </div>
+    </div>
+
+    <!-- Add more articles here if needed -->
   </section>
 
   <footer>
-    <p>© 2025 Right to Live. All rights reserved.</p>
+    <p>&copy; 2025 Right to Live. All rights reserved.</p>
   </footer>
 </body>
 </html>
