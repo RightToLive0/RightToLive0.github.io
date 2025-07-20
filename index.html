@@ -4,111 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Right to Live</title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Work Sans', sans-serif;
-      background-color: #e0f0ff;
-      color: #1a1a1a;
+      background-color: #b3e5fc; /* Baby blue */
+      color: #000;
     }
     header {
-      background-color: #e0f0ff;
       padding: 2rem;
       text-align: center;
-      border-bottom: 4px solid #ffe600;
+      background-color: #b3e5fc;
     }
     header h1 {
-      font-size: 2.5rem;
-      margin: 0;
+      font-size: 3rem;
       font-weight: 800;
-      color: #1a1a1a;
+      margin: 0;
     }
     .quote {
-      font-size: 1.25rem;
-      color: #ffce00;
-      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #fff;
     }
-    .content {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    .articles {
+    .articles-section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
     }
     .card {
-      background: white;
+      background-color: #fff;
       border-radius: 12px;
-      overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      overflow: hidden;
+      transition: transform 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.02);
     }
     .card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-    .card-body {
+    .card-content {
       padding: 1rem;
     }
-    .card-body h3 {
-      margin: 0 0 0.5rem;
-      font-weight: 600;
-      color: #004f8c;
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
     }
-    .card-body p {
-      font-size: 0.95rem;
+    .card-desc {
+      font-size: 1rem;
       color: #333;
     }
-    .card-body a {
+    .card a {
       display: inline-block;
-      margin-top: 0.75rem;
+      margin-top: 1rem;
+      color: #0288d1;
+      font-weight: 600;
       text-decoration: none;
-      color: #ffe600;
-      font-weight: bold;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #d0eaff;
-      font-size: 0.9rem;
-      color: #555;
+    .card a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Right to Live</h1>
-    <p class="quote">"Justice will not be served until those who are unaffected are as outraged as those who are."</p>
+    <div class="quote">Justice will not be served until those who are unaffected are as outraged as those who are.</div>
   </header>
-  <div class="content">
-    <section class="articles">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1605733160314-4e4d8e4f8b84" alt="Healthcare" />
-        <div class="card-body">
-          <h3>Why America Needs Universal Healthcare</h3>
-          <p>Healthcare should be a right, not a privilege. Here's why the system needs an overhaul.</p>
-          <a href="#">Read More</a>
-        </div>
+
+  <section class="articles-section">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092334653-a6c4e56f0407" alt="Healthcare">
+      <div class="card-content">
+        <div class="card-title">Why America Needs Universal Healthcare</div>
+        <div class="card-desc">Examining the flaws in the current healthcare system and how universal healthcare could provide equity for all.</div>
+        <a href="#">Read More</a>
       </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Palestinian_children_Gaza.jpg" alt="Palestine" />
-        <div class="card-body">
-          <h3>The History of the Israel/Palestine Conflict</h3>
-          <p>A comprehensive breakdown of the history behind the ongoing struggle in the region.</p>
-          <a href="articles/palestine.html">Read More</a>
-        </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Israeli%E2%80%93Palestinian_conflict_collage.png/800px-Israeli%E2%80%93Palestinian_conflict_collage.png" alt="Palestine">
+      <div class="card-content">
+        <div class="card-title">The History of the Israel-Palestine Conflict</div>
+        <div class="card-desc">A deep dive into one of the world’s most complex and longstanding geopolitical struggles.</div>
+        <a href="articles/palestine.html">Read More</a>
       </div>
-    </section>
-  </div>
-  <footer>
-    &copy; 2025 Right to Live. Built with passion for justice and equity.
-  </footer>
+    </div>
+  </section>
 </body>
 </html>
