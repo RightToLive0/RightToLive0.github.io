@@ -1,142 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Right to Live - Justice for All</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Right to Live</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --hero-bg: #222;
-      --accent-yellow: #fdd835;
-      --accent-red: #d32f2f;
-      --card-shadow: rgba(0, 0, 0, 0.1);
+      --blue: #003399;
+      --yellow: #FFC627;
+      --red: #D32F2F;
+      --shadow: rgba(0,0,0,0.1);
     }
-
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #f8f9fa;
-      color: #212529;
-    }
-
-    header {
-      background: var(--hero-bg);
-      padding: 1rem 2rem;
-      color: white;
-      text-align: center;
-    }
-
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body { font-family: Roboto, sans-serif; background:#F8F9FA; color:#212529; }
+    header { background:var(--blue); padding:2rem; text-align:center; }
+    header h1 { color:var(--yellow); font-size:2.75rem; }
     .hero {
-      background: var(--hero-bg) url('https://images.unsplash.com/photo-1607845212407-3592f1382218') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 8rem 2rem;
+      background:var(--blue) url('https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62') center/cover no-repeat;
+      color:white; text-align:left; padding:6rem 2rem;
     }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    .hero-tagline {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-    }
-
+    .hero h2 { font-size:3rem; margin-bottom:.5rem; }
+    .hero p { font-size:1.25rem; }
     .article-grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      padding: 2rem;
+      display:grid; gap:2rem; padding:2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
     }
-
     .article-card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px var(--card-shadow);
-      overflow: hidden;
-      transition: transform 0.2s;
+      background:white; border-radius:8px;
+      box-shadow:0 4px 12px var(--shadow); overflow:hidden;
+      transition:transform .2s;
     }
-
-    .article-card:hover {
-      transform: translateY(-5px);
-    }
-
+    .article-card:hover { transform:translateY(-5px); }
     .article-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+      width:100%; height:200px; object-fit:cover;
     }
-
     .article-content {
-      padding: 1rem;
+      padding:1rem;
     }
-
-    .article-content h4 {
-      margin: 0;
-      font-size: 1.25rem;
-      color: var(--hero-bg);
+    .article-content h3 {
+      color: var(--blue); font-size:1.5rem; margin-bottom:.5rem;
+      /* mimic hand-painted style */
+      font-family: 'Courier New', monospace;
     }
-
     .article-content p {
-      font-size: 0.95rem;
-      margin: 0.5rem 0;
+      font-size:0.95rem; margin-bottom:1rem;
     }
-
     .btn {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: var(--accent-yellow);
-      color: var(--hero-bg);
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
+      background:var(--yellow); color:var(--blue);
+      padding:.5rem 1rem; text-decoration:none;
+      font-weight:bold; border-radius:4px;
     }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
+    .btn:hover { background: #e6b724; }
+    footer { text-align:center; padding:2rem; background:#EEE; font-size:.9rem; margin-top:2rem; }
   </style>
 </head>
 <body>
+
   <header>
-    <h2>Right to Live</h2>
+    <h1>Right to Live</h1>
   </header>
 
   <section class="hero">
-    <h1>Right to Live</h1>
-    <p class="hero-tagline">A movement for justice, dignity & truth.</p>
+    <h2>Justice, Dignity & Truth</h2>
+    <p>Stories and struggles that demand our attention.</p>
   </section>
 
   <section class="article-grid">
+    <!-- Israel/Palestine Card -->
     <div class="article-card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Gaza_strip_destroyed_buildings_2021.jpg/800px-Gaza_strip_destroyed_buildings_2021.jpg" alt="Israel/Palestine Conflict">
       <div class="article-content">
-        <h4>Understanding the Israel/Palestine Conflict</h4>
+        <h3>Israel/Palestine Conflict</h3>
         <p>An essential overview of historical and current struggles.</p>
         <a href="articles/israel-palestine.html" class="btn">Read Full Article →</a>
       </div>
     </div>
 
+    <!-- Healthcare Card -->
     <div class="article-card">
       <img src="https://images.unsplash.com/photo-1588776814546-cad3f2ba3d58" alt="Healthcare">
       <div class="article-content">
-        <h4>Why America Needs Universal Healthcare</h4>
-        <p>Exploring the moral and economic necessity of a healthcare system that works for everyone.</p>
+        <h3>Universal Healthcare</h3>
+        <p>Exploring the moral and economic necessity of a fair healthcare system.</p>
         <a href="#" class="btn">Read Full Article →</a>
       </div>
     </div>
-
-    <!-- Add more articles here if needed -->
   </section>
 
   <footer>
-    <p>&copy; 2025 Right to Live. All rights reserved.</p>
+    &copy; 2025 Right to Live — Justice for All
   </footer>
+
 </body>
 </html>
