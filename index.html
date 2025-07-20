@@ -6,17 +6,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --blue: #003399;
-      --yellow: #FFC627;
-      --red: #D32F2F;
+      --green: #009739; /* Guyana green */
+      --yellow: #FFD100; /* Guyana yellow */
+      --red: #EF3340;    /* Guyana red */
+      --black: #000000;  /* Guyana black */
       --shadow: rgba(0,0,0,0.1);
     }
     * { margin:0; padding:0; box-sizing: border-box; }
     body { font-family: Roboto, sans-serif; background:#F8F9FA; color:#212529; }
-    header { background:var(--blue); padding:2rem; text-align:center; }
+    header { background:var(--green); padding:2rem; text-align:center; }
     header h1 { color:var(--yellow); font-size:2.75rem; }
     .hero {
-      background:var(--blue) url('https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62') center/cover no-repeat;
+      background:var(--green) url('https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62') center/cover no-repeat;
       color:white; text-align:left; padding:6rem 2rem;
     }
     .hero h2 { font-size:3rem; margin-bottom:.5rem; }
@@ -38,15 +39,14 @@
       padding:1rem;
     }
     .article-content h3 {
-      color: var(--blue); font-size:1.5rem; margin-bottom:.5rem;
-      /* mimic hand-painted style */
+      color: var(--red); font-size:1.5rem; margin-bottom:.5rem;
       font-family: 'Courier New', monospace;
     }
     .article-content p {
       font-size:0.95rem; margin-bottom:1rem;
     }
     .btn {
-      background:var(--yellow); color:var(--blue);
+      background:var(--yellow); color:var(--black);
       padding:.5rem 1rem; text-decoration:none;
       font-weight:bold; border-radius:4px;
     }
