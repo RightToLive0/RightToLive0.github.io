@@ -1,95 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Right to Live</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --green: #009739; /* Guyana green */
-      --yellow: #FFD100; /* Guyana yellow */
-      --red: #EF3340;    /* Guyana red */
-      --black: #000000;  /* Guyana black */
-      --shadow: rgba(0,0,0,0.1);
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      background-color: #e0f0ff;
+      color: #1a1a1a;
     }
-    * { margin:0; padding:0; box-sizing: border-box; }
-    body { font-family: Roboto, sans-serif; background:#F8F9FA; color:#212529; }
-    header { background:var(--green); padding:2rem; text-align:center; }
-    header h1 { color:var(--yellow); font-size:2.75rem; }
-    .hero {
-      background:var(--green) url('https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62') center/cover no-repeat;
-      color:white; text-align:left; padding:6rem 2rem;
+    header {
+      background-color: #e0f0ff;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 4px solid #ffe600;
     }
-    .hero h2 { font-size:3rem; margin-bottom:.5rem; }
-    .hero p { font-size:1.25rem; }
-    .article-grid {
-      display:grid; gap:2rem; padding:2rem;
-      grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 800;
+      color: #1a1a1a;
     }
-    .article-card {
-      background:white; border-radius:8px;
-      box-shadow:0 4px 12px var(--shadow); overflow:hidden;
-      transition:transform .2s;
+    .quote {
+      font-size: 1.25rem;
+      color: #ffce00;
+      margin-top: 1rem;
     }
-    .article-card:hover { transform:translateY(-5px); }
-    .article-card img {
-      width:100%; height:200px; object-fit:cover;
+    .content {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
-    .article-content {
-      padding:1rem;
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
-    .article-content h3 {
-      color: var(--red); font-size:1.5rem; margin-bottom:.5rem;
-      font-family: 'Courier New', monospace;
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
-    .article-content p {
-      font-size:0.95rem; margin-bottom:1rem;
+    .card:hover {
+      transform: translateY(-5px);
     }
-    .btn {
-      background:var(--yellow); color:var(--black);
-      padding:.5rem 1rem; text-decoration:none;
-      font-weight:bold; border-radius:4px;
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
-    .btn:hover { background: #e6b724; }
-    footer { text-align:center; padding:2rem; background:#EEE; font-size:.9rem; margin-top:2rem; }
+    .card-body {
+      padding: 1rem;
+    }
+    .card-body h3 {
+      margin: 0 0 0.5rem;
+      font-weight: 600;
+      color: #004f8c;
+    }
+    .card-body p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .card-body a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      text-decoration: none;
+      color: #ffe600;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #d0eaff;
+      font-size: 0.9rem;
+      color: #555;
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Right to Live</h1>
+    <p class="quote">"Justice will not be served until those who are unaffected are as outraged as those who are."</p>
   </header>
-
-  <section class="hero">
-    <h2>Justice, Dignity & Truth</h2>
-    <p>Stories and struggles that demand our attention.</p>
-  </section>
-
-  <section class="article-grid">
-    <!-- Israel/Palestine Card -->
-    <div class="article-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Gaza_strip_destroyed_buildings_2021.jpg/800px-Gaza_strip_destroyed_buildings_2021.jpg" alt="Israel/Palestine Conflict">
-      <div class="article-content">
-        <h3>Israel/Palestine Conflict</h3>
-        <p>An essential overview of historical and current struggles.</p>
-        <a href="articles/israel-palestine.html" class="btn">Read Full Article →</a>
+  <div class="content">
+    <section class="articles">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1605733160314-4e4d8e4f8b84" alt="Healthcare" />
+        <div class="card-body">
+          <h3>Why America Needs Universal Healthcare</h3>
+          <p>Healthcare should be a right, not a privilege. Here's why the system needs an overhaul.</p>
+          <a href="#">Read More</a>
+        </div>
       </div>
-    </div>
-
-    <!-- Healthcare Card -->
-    <div class="article-card">
-      <img src="https://images.unsplash.com/photo-1588776814546-cad3f2ba3d58" alt="Healthcare">
-      <div class="article-content">
-        <h3>Universal Healthcare</h3>
-        <p>Exploring the moral and economic necessity of a fair healthcare system.</p>
-        <a href="#" class="btn">Read Full Article →</a>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Palestinian_children_Gaza.jpg" alt="Palestine" />
+        <div class="card-body">
+          <h3>The History of the Israel/Palestine Conflict</h3>
+          <p>A comprehensive breakdown of the history behind the ongoing struggle in the region.</p>
+          <a href="articles/palestine.html">Read More</a>
+        </div>
       </div>
-    </div>
-  </section>
-
+    </section>
+  </div>
   <footer>
-    &copy; 2025 Right to Live — Justice for All
+    &copy; 2025 Right to Live. Built with passion for justice and equity.
   </footer>
-
 </body>
 </html>
